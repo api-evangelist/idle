@@ -1,0 +1,43 @@
+name: Idle Finance API FinOps
+description: Cost and financial operations guidance for teams consuming or integrating the Idle Finance API. Idle Finance does not publish public API pricing tiers. Integration costs relate primarily to smart contract gas fees and the protocol fee structure on yield earned. Integrators may earn revenue share via the Idle Integrators Program.
+cost_model:
+  api_access: no direct cost publicly documented; access granted by request
+  authentication: Bearer token, issued upon approved request
+  smart_contract_fees:
+    protocol_performance_fee: 15% of yield earned (retained by Idle DAO treasury)
+    gas_costs: variable; paid by the user per on-chain transaction (deposit/withdraw/rebalance)
+integrators_program:
+  description: Integrators who direct TVL to Idle vaults via referral code earn a share of the protocol fees generated from their contributed volume.
+  base_revenue_share: 10%
+  max_revenue_share: 50%
+  tiers: 9
+  tier_basis: total deposited volume via integration
+  distribution_schedule:
+    ethereum: Monthly, via 3-month linear vesting contract; minimum threshold 500 IDLE tokens
+    polygon: Weekly, direct wallet transfer; minimum threshold 100 MATIC tokens
+  tracking: Dune Analytics dashboards
+governance_staking_finops:
+  token: IDLE
+  staking_token: stkIDLE
+  lock_periods:
+    - duration: 1 year
+      stkIDLE_ratio: 0.25
+    - duration: 2 years
+      stkIDLE_ratio: 0.50
+    - duration: 4 years
+      stkIDLE_ratio: 1.00
+  fee_discounts: stkIDLE holders may receive monthly fee discounts on protocol fees based on staked amount relative to deposited TVL
+  governance_rewards: protocol fees used to purchase IDLE on open market and distribute to stakers weekly (program currently paused per IIP-36)
+cost_optimization_tips:
+  - Request API access early; Bearer tokens are granted manually and may take time
+  - Use the /tvls and /pools endpoints for aggregate data before querying per-address /rates endpoints to minimize unnecessary calls
+  - Monitor Dune Analytics dashboards to track integration TVL and projected revenue share
+  - Consider locking IDLE as stkIDLE to access potential fee discounts (monthly distribution)
+  - On Polygon zkEVM and Optimism, gas costs are significantly lower than Ethereum mainnet
+references:
+  - url: https://docs.idle.finance/developers/api
+    description: API documentation
+  - url: https://idlefinance.typeform.com/to/CzRkDH
+    description: Request API access
+  - url: https://docs.idle.finance/governance/idle-staking
+    description: stkIDLE staking and governance details

@@ -1,0 +1,12 @@
+name: Idle Finance API Rate Limits
+description: Idle Finance does not publicly document specific rate limit thresholds for their REST API. Access is granted via Bearer token by request. The underlying protocol rebalances yield allocations on a cadence that reflects practical data freshness boundaries for API consumers.
+rate_limits: []
+notes:
+  - No explicit rate limit documentation is published by Idle Finance as of 2026-06-14
+  - API access is gated by Bearer token; limits may be communicated privately upon token issuance
+  - The protocol rebalances allocations approximately every 3 hours on Ethereum and hourly on Polygon, establishing natural data refresh cadences
+  - For rate limit details, contact Idle Finance via https://idlefinance.typeform.com/to/CzRkDH or the Discord community at https://discord.gg/mpySAJp
+rebalance_cadence:
+  ethereum: approximately every 3 hours
+  polygon: approximately every 1 hour
+  trigger: allocation improvement threshold or off-chain bot signal

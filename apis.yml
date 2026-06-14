@@ -1,0 +1,108 @@
+name: Idle Finance
+description: Idle Finance is a decentralized yield automation protocol that has operated since 2019, enabling users and integrators to optimize yield generation across DeFi. The platform offers REST APIs for querying Best Yield and Yield Tranches pools, APY and TVL metrics, historical rates, and governance staking information. Idle aggregates yield sources across protocols such as Compound, Aave, Morpho, and Clearpool, and supports multiple chains including Ethereum, Polygon, Polygon zkEVM, and Optimism.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/idle/refs/heads/main/apis.yml
+created: '2026-06-14'
+modified: '2026-06-14'
+specificationVersion: '0.19'
+tags:
+  - DeFi
+  - Yield Optimization
+  - Finance
+  - Crypto
+  - Staking
+  - Governance
+  - TVL
+  - APY
+apis:
+  - name: Idle Finance API
+    description: The Idle Finance REST API provides programmatic access to Best Yield and Yield Tranches vault pools, total value locked (TVL) metrics, historical yield rates for underlying token addresses, and protocol-level data across supported networks. Authentication is via Bearer token obtained by request.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.idle.finance/developers/api
+    baseURL: https://api.idle.finance
+    tags:
+      - Pools
+      - TVL
+      - Rates
+      - Best Yield
+      - Yield Tranches
+    properties:
+      - type: Documentation
+        url: https://docs.idle.finance/developers/api
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/api-evangelist/idle/refs/heads/main/openapi.yml
+      - type: Plans
+        url: https://raw.githubusercontent.com/api-evangelist/idle/refs/heads/main/plans/plans.yml
+      - type: RateLimits
+        url: https://raw.githubusercontent.com/api-evangelist/idle/refs/heads/main/rate-limits/rate-limits.yml
+      - type: FinOps
+        url: https://raw.githubusercontent.com/api-evangelist/idle/refs/heads/main/finops/finops.yml
+    contact:
+      - FN: Idle Finance Developer Access
+        url: https://idlefinance.typeform.com/to/CzRkDH
+        email: ''
+  - name: Idle Finance Polygon zkEVM API
+    description: Idle Finance REST API endpoint for Polygon zkEVM network, providing pool and TVL data for Yield Tranches vaults deployed on Polygon zkEVM.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.idle.finance/developers/api
+    baseURL: https://api-zkevm.idle.finance
+    tags:
+      - Polygon zkEVM
+      - Pools
+      - TVL
+      - Yield Tranches
+    properties:
+      - type: Documentation
+        url: https://docs.idle.finance/developers/api
+    contact:
+      - FN: Idle Finance Developer Access
+        url: https://idlefinance.typeform.com/to/CzRkDH
+        email: ''
+  - name: Idle Finance Optimism API
+    description: Idle Finance REST API endpoint for the Optimism network, providing pool and TVL data for Yield Tranches vaults deployed on Optimism.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://docs.idle.finance/developers/api
+    baseURL: https://api-optimism.idle.finance
+    tags:
+      - Optimism
+      - Pools
+      - TVL
+      - Yield Tranches
+    properties:
+      - type: Documentation
+        url: https://docs.idle.finance/developers/api
+    contact:
+      - FN: Idle Finance Developer Access
+        url: https://idlefinance.typeform.com/to/CzRkDH
+        email: ''
+common:
+  - type: Developer Documentation
+    url: https://docs.idle.finance/developers/introduction
+  - type: Authentication
+    url: https://idlefinance.typeform.com/to/CzRkDH
+  - type: GitHub Organization
+    url: https://github.com/Idle-Finance
+  - type: Governance
+    url: https://gov.idle.finance
+  - type: Governance Tally
+    url: https://tally.xyz/gov/idle
+  - type: Bug Bounty
+    url: https://immunefi.com/bounty/idlefinance/
+  - type: Status
+    url: https://status.idle.finance
+  - type: Discord
+    url: https://discord.gg/mpySAJp
+  - type: Twitter
+    url: https://twitter.com/idlefinance
+  - type: Blog
+    url: https://medium.com/idle-finance
+  - type: Website
+    url: https://idle.finance
+  - type: Terms of Service
+    url: https://idle.finance/terms
+  - type: Privacy Policy
+    url: https://idle.finance/privacy
+maintainers:
+  - FN: API Evangelist
+    url: https://apievangelist.com
+    email: info@apievangelist.com

@@ -1,0 +1,37 @@
+name: Idle Finance API Plans
+description: Idle Finance API access is gated by Bearer token authentication. Access is granted by request through a Typeform intake form. The API itself does not publicly advertise tiered subscription pricing; however, the Idle protocol offers an Integrators Program with fee-sharing tiers based on deposited TVL for builders integrating Idle vaults into their products.
+plans:
+  - name: API Access (Request-Based)
+    description: Standard API access granted upon request via the Idle Finance developer intake form. Provides Bearer token credentials for querying pools, TVL, and rates endpoints across all supported networks (Ethereum, Polygon zkEVM, Optimism).
+    url: https://idlefinance.typeform.com/to/CzRkDH
+    type: freemium
+    access: request
+    authentication:
+      - type: BearerToken
+    endpoints:
+      - GET /pools
+      - GET /tvls
+      - GET /rates/{address}
+  - name: Integrators Program - Base Tier
+    description: Fee-sharing partnership tier for developers integrating Idle vaults into their dApps, wallets, or protocols. Earn 10% profit share on fees generated from TVL contributed to Idle via referral/integration.
+    url: https://docs.idle.finance/developers/best-yield
+    type: partnership
+    revenue_share: 10%
+    minimum_tvl: unspecified
+    distribution:
+      ethereum: Monthly via vesting contract (3-month linear release), minimum 500 IDLE
+      polygon: Weekly direct wallet transfer, minimum 100 MATIC
+  - name: Integrators Program - Top Tier
+    description: Maximum fee-sharing tier for integrators contributing over $1 billion in TVL to Idle. Earn up to 50% profit share on protocol fees generated from integrated volume. Eligibility and tier are tracked via Dune Analytics dashboards.
+    url: https://docs.idle.finance/developers/best-yield
+    type: partnership
+    revenue_share: 50%
+    minimum_tvl: '>$1,000,000,000'
+    tiers: 9
+    distribution:
+      ethereum: Monthly via vesting contract (3-month linear release), minimum 500 IDLE
+      polygon: Weekly direct wallet transfer, minimum 100 MATIC
+notes:
+  - API pricing and access tiers are not publicly listed; contact via the Typeform request form at https://idlefinance.typeform.com/to/CzRkDH
+  - The Integrators Program fee-sharing structure has 9 tiers between 10% and 50% based on deposited volume
+  - stkIDLE holders (governance stakers) may receive fee discounts distributed monthly via a dedicated dashboard
