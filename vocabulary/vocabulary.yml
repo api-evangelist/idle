@@ -1,0 +1,90 @@
+vocabulary:
+  - term: Best Yield
+    definition: >-
+      Idle Finance's automated yield optimization strategy that dynamically
+      allocates deposited assets across multiple DeFi lending protocols
+      (Compound, Aave, Morpho, etc.) to maximize the highest available APY at
+      any given time.
+
+  - term: Yield Tranches
+    definition: >-
+      A risk-segmented DeFi product offered by Idle Finance that splits yield
+      into Senior (lower risk, protected) and Junior (higher risk, amplified
+      yield) tranches. Junior tranche holders absorb losses first in exchange
+      for higher returns.
+
+  - term: Senior Tranche
+    definition: >-
+      The protected tier of a Yield Tranches vault. Senior tranche depositors
+      receive a fixed or capped yield and are protected against losses by the
+      Junior tranche.
+
+  - term: Junior Tranche
+    definition: >-
+      The higher-risk tier of a Yield Tranches vault. Junior tranche depositors
+      absorb losses first but receive amplified yield in exchange for providing
+      protection to the Senior tranche.
+
+  - term: APY
+    definition: >-
+      Annual Percentage Yield. The effective annualised rate of return on a
+      deposited asset, accounting for compounding. Expressed as a decimal
+      string in the Idle Finance API.
+
+  - term: TVL
+    definition: >-
+      Total Value Locked. The aggregate value (in USD) of assets deposited in
+      an Idle Finance pool or vault at a given point in time.
+
+  - term: Underlying Token
+    definition: >-
+      The base asset (e.g. DAI, USDC, USDT, WETH) that is deposited into an
+      Idle Finance vault. The vault holds and allocates this token across
+      underlying protocols to generate yield.
+
+  - term: Underlying Protocol
+    definition: >-
+      A third-party DeFi lending or yield protocol (e.g. Aave, Compound,
+      Morpho, Clearpool) to which Idle Finance routes deposited assets to
+      generate yield.
+
+  - term: Pool
+    definition: >-
+      A deployable smart contract vault on Idle Finance that accepts deposits
+      of an underlying token and optimizes yield through Best Yield or Yield
+      Tranches strategies.
+
+  - term: Allocation
+    definition: >-
+      The percentage of a pool's assets routed to a specific underlying
+      protocol at a given time. Allocations are rebalanced automatically by
+      the Idle protocol.
+
+  - term: Governance
+    definition: >-
+      The on-chain decision-making process for the Idle Finance protocol,
+      governed by IDLE token holders via Snapshot votes and on-chain proposals
+      managed through Tally.
+
+  - term: IDLE Token
+    definition: >-
+      The native governance and staking token of the Idle Finance protocol.
+      Holders can participate in governance votes and stake IDLE for protocol
+      rewards.
+
+  - term: stkIDLE
+    definition: >-
+      Staked IDLE tokens. Represents locked IDLE tokens that grant holders
+      governance voting power and a share of protocol fees.
+
+  - term: Bearer Token
+    definition: >-
+      The API authentication credential required for all Idle Finance REST API
+      requests. Obtained by completing the developer access form. Passed as
+      "Authorization: Bearer <token>" in request headers.
+
+  - term: Frequency
+    definition: >-
+      A query parameter for the /rates/{address} endpoint specifying the
+      number of seconds between data points in the historical rate series.
+      Defaults to 86400 (one day).

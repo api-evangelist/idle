@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idle/main/json-schema/pool.json",
+  "title": "Pool",
+  "description": "Represents a single Best Yield or Yield Tranches vault pool on the Idle Finance network.",
+  "type": "object",
+  "properties": {
+    "address": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{40}$",
+      "description": "Smart contract address of the pool/vault.",
+      "example": "0xc8c64CC8c15D9aa1F4dD40933f3eF742A7c62478"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable pool name.",
+      "example": "idleDAIYield"
+    },
+    "token": {
+      "type": "string",
+      "description": "Underlying token symbol.",
+      "example": "DAI"
+    },
+    "tokenAddress": {
+      "type": "string",
+      "pattern": "^0x[a-fA-F0-9]{40}$",
+      "description": "Contract address of the underlying token.",
+      "example": "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+    },
+    "type": {
+      "type": "string",
+      "description": "Pool/vault type.",
+      "enum": ["best-yield", "yield-tranches-senior", "yield-tranches-junior"],
+      "example": "best-yield"
+    },
+    "apy": {
+      "type": "string",
+      "description": "Current annualised percentage yield as a decimal string.",
+      "example": "4.52"
+    },
+    "tvl": {
+      "type": "string",
+      "description": "Total value locked in the pool as a decimal string (USD).",
+      "example": "5234567.89"
+    },
+    "underlying": {
+      "type": "array",
+      "description": "List of underlying protocol allocations.",
+      "items": {
+        "$ref": "./underlying-allocation.json"
+      }
+    }
+  },
+  "required": ["address", "name", "token", "tokenAddress", "type"]
+}

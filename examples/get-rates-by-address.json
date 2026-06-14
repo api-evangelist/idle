@@ -1,0 +1,46 @@
+{
+  "summary": "GET /rates/{address} — example response",
+  "description": "Example response from the Idle Finance /rates/{address} endpoint returning historical daily APY data for the DAI Best Yield vault.",
+  "request": {
+    "method": "GET",
+    "url": "https://api.idle.finance/rates/0x6B175474E89094C44Da98b954EedeAC495271d0F?start=1672531200&end=1704067200&isRisk=false&frequency=86400&order=asc&limit=5",
+    "headers": {
+      "Authorization": "Bearer <token>"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "timestamp": 1672531200,
+        "date": "2023-01-01",
+        "apy": "3.85",
+        "tvl": "5100000.00"
+      },
+      {
+        "timestamp": 1672617600,
+        "date": "2023-01-02",
+        "apy": "3.90",
+        "tvl": "5120000.00"
+      },
+      {
+        "timestamp": 1672704000,
+        "date": "2023-01-03",
+        "apy": "3.88",
+        "tvl": "5115000.00"
+      },
+      {
+        "timestamp": 1672790400,
+        "date": "2023-01-04",
+        "apy": "4.01",
+        "tvl": "5200000.00"
+      },
+      {
+        "timestamp": 1672876800,
+        "date": "2023-01-05",
+        "apy": "4.10",
+        "tvl": "5234567.89"
+      }
+    ]
+  }
+}

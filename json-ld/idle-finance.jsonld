@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "idle": "https://idle.finance/vocab#",
+    "openapi": "https://openapis.org/schema#"
+  },
+  "@type": "Organization",
+  "@id": "https://idle.finance",
+  "name": "Idle Finance",
+  "description": "Idle Finance is a decentralized yield automation protocol enabling users and integrators to optimize yield generation across DeFi. The platform operates since 2019 and aggregates yield sources across Compound, Aave, Morpho, and Clearpool.",
+  "url": "https://idle.finance",
+  "sameAs": [
+    "https://github.com/Idle-Finance",
+    "https://twitter.com/idlefinance",
+    "https://medium.com/idle-finance",
+    "https://gov.idle.finance",
+    "https://tally.xyz/gov/idle"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "url": "https://idlefinance.typeform.com/to/CzRkDH",
+    "contactType": "Developer API Access"
+  },
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Idle Finance REST API",
+      "description": "REST API for querying Best Yield and Yield Tranches pools, APY, TVL, historical rates, and governance staking on Ethereum, Polygon zkEVM, and Optimism.",
+      "url": "https://docs.idle.finance/developers/api",
+      "idle:baseURL": "https://api.idle.finance",
+      "idle:authenticationMethod": "Bearer Token"
+    }
+  ],
+  "hasAPI": {
+    "@type": "WebAPI",
+    "name": "Idle Finance API",
+    "url": "https://docs.idle.finance/developers/api",
+    "documentation": "https://docs.idle.finance/developers/introduction",
+    "idle:openapi": "https://raw.githubusercontent.com/api-evangelist/idle/refs/heads/main/openapi.yml",
+    "termsOfService": "https://idle.finance/terms",
+    "provider": {
+      "@type": "Organization",
+      "name": "Idle Finance",
+      "url": "https://idle.finance"
+    },
+    "endpointURL": "https://api.idle.finance",
+    "potentialAction": [
+      {
+        "@type": "Action",
+        "name": "Get Pools",
+        "description": "Retrieve all Best Yield and Yield Tranches vault pools on a network.",
+        "idle:endpoint": "GET /pools"
+      },
+      {
+        "@type": "Action",
+        "name": "Get TVLs",
+        "description": "Retrieve total value locked per underlying token.",
+        "idle:endpoint": "GET /tvls"
+      },
+      {
+        "@type": "Action",
+        "name": "Get Historical Rates",
+        "description": "Retrieve historical daily APY rates for a Best Yield vault by underlying token address.",
+        "idle:endpoint": "GET /rates/{address}"
+      }
+    ]
+  },
+  "subjectOf": {
+    "@type": "FinancialProduct",
+    "name": "Idle Best Yield",
+    "description": "Automated yield optimization across DeFi lending protocols including Aave, Compound, and Morpho.",
+    "url": "https://idle.finance",
+    "feesAndCommissionsSpecification": "https://idle.finance/terms"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idle/main/json-schema/underlying-allocation.json",
+  "title": "UnderlyingAllocation",
+  "description": "Allocation of pool assets to an underlying yield protocol (e.g. Aave, Compound, Morpho, Clearpool).",
+  "type": "object",
+  "properties": {
+    "protocol": {
+      "type": "string",
+      "description": "Name of the underlying protocol.",
+      "example": "Aave"
+    },
+    "allocation": {
+      "type": "string",
+      "description": "Percentage allocation as a decimal string.",
+      "example": "62.5"
+    },
+    "apy": {
+      "type": "string",
+      "description": "APY from this protocol as a decimal string.",
+      "example": "3.91"
+    }
+  }
+}

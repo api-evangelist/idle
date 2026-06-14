@@ -1,0 +1,20 @@
+{
+  "summary": "GET /tvls — example response",
+  "description": "Example response from the Idle Finance /tvls endpoint returning total value locked per underlying token on Ethereum mainnet.",
+  "request": {
+    "method": "GET",
+    "url": "https://api.idle.finance/tvls",
+    "headers": {
+      "Authorization": "Bearer <token>"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "0x6B175474E89094C44Da98b954EedeAC495271d0F": "15234567.89",
+      "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48": "8901234.56",
+      "0xdAC17F958D2ee523a2206206994597C13D831ec7": "4123456.78",
+      "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2": "1987654.32"
+    }
+  }
+}

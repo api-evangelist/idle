@@ -1,0 +1,54 @@
+{
+  "summary": "GET /pools — example response",
+  "description": "Example response from the Idle Finance /pools endpoint returning Best Yield and Yield Tranches vault pools on Ethereum mainnet.",
+  "request": {
+    "method": "GET",
+    "url": "https://api.idle.finance/pools",
+    "headers": {
+      "Authorization": "Bearer <token>"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": [
+      {
+        "address": "0xc8c64CC8c15D9aa1F4dD40933f3eF742A7c62478",
+        "name": "idleDAIYield",
+        "token": "DAI",
+        "tokenAddress": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        "type": "best-yield",
+        "apy": "4.52",
+        "tvl": "5234567.89",
+        "underlying": [
+          { "protocol": "Aave", "allocation": "62.5", "apy": "3.91" },
+          { "protocol": "Compound", "allocation": "37.5", "apy": "5.41" }
+        ]
+      },
+      {
+        "address": "0xFaC1D515b7Fe4EB3e7c1f2b03eD5a57E6dD5D1e",
+        "name": "idleUSDCYield",
+        "token": "USDC",
+        "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        "type": "best-yield",
+        "apy": "5.10",
+        "tvl": "8901234.56",
+        "underlying": [
+          { "protocol": "Morpho", "allocation": "50.0", "apy": "5.80" },
+          { "protocol": "Aave", "allocation": "50.0", "apy": "4.40" }
+        ]
+      },
+      {
+        "address": "0xD0DbcD556cA22d3f3c142e9a3220053FD7a247BC",
+        "name": "idleUSDCJuniorTranche",
+        "token": "USDC",
+        "tokenAddress": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+        "type": "yield-tranches-junior",
+        "apy": "7.25",
+        "tvl": "2345678.90",
+        "underlying": [
+          { "protocol": "Clearpool", "allocation": "100.0", "apy": "7.25" }
+        ]
+      }
+    ]
+  }
+}

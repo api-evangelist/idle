@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/idle/main/json-schema/rate-record.json",
+  "title": "RateRecord",
+  "description": "Historical daily APY/rate record for a Best Yield vault on Idle Finance.",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "integer",
+      "format": "int64",
+      "description": "Unix timestamp of the record.",
+      "example": 1704067200
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 date string corresponding to the record.",
+      "example": "2024-01-01"
+    },
+    "apy": {
+      "type": "string",
+      "description": "Annualised percentage yield at the given timestamp.",
+      "example": "4.12"
+    },
+    "tvl": {
+      "type": "string",
+      "description": "Total value locked at the given timestamp (USD).",
+      "example": "5001234.00"
+    }
+  },
+  "required": ["timestamp", "apy"]
+}
