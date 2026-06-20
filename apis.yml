@@ -1,6 +1,6 @@
 name: Idle Finance
 description: Idle Finance is a decentralized yield automation protocol that has operated since 2019, enabling users and integrators to optimize yield generation across DeFi. The platform offers REST APIs for querying Best Yield and Yield Tranches pools, APY and TVL metrics, historical rates, and governance staking information. Idle aggregates yield sources across protocols such as Compound, Aave, Morpho, and Clearpool, and supports multiple chains including Ethereum, Polygon, Polygon zkEVM, and Optimism.
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/idle/refs/heads/main/apis.yml
 created: '2026-06-14'
 modified: '2026-06-14'
@@ -17,7 +17,7 @@ tags:
 apis:
   - name: Idle Finance API
     description: The Idle Finance REST API provides programmatic access to Best Yield and Yield Tranches vault pools, total value locked (TVL) metrics, historical yield rates for underlying token addresses, and protocol-level data across supported networks. Authentication is via Bearer token obtained by request.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.idle.finance/developers/api
     baseURL: https://api.idle.finance
     tags:
@@ -43,7 +43,7 @@ apis:
         email: ''
   - name: Idle Finance Polygon zkEVM API
     description: Idle Finance REST API endpoint for Polygon zkEVM network, providing pool and TVL data for Yield Tranches vaults deployed on Polygon zkEVM.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.idle.finance/developers/api
     baseURL: https://api-zkevm.idle.finance
     tags:
@@ -60,7 +60,7 @@ apis:
         email: ''
   - name: Idle Finance Optimism API
     description: Idle Finance REST API endpoint for the Optimism network, providing pool and TVL data for Yield Tranches vaults deployed on Optimism.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://docs.idle.finance/developers/api
     baseURL: https://api-optimism.idle.finance
     tags:
