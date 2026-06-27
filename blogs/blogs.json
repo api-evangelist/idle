@@ -2,6 +2,13 @@
   "repo": "idle",
   "feeds": [
     {
+      "source": "https://medium.com/feed/idle-finance",
+      "feed_url": "https://medium.com/feed/idle-finance",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://twitter.com/idlefinance",
       "feed_url": "https://twitter.com/idlefinance",
       "title": "",
@@ -9,6 +16,6 @@
       "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "post_count": 10,
+  "fetched": "2026-06-27T12:03:07Z"
 }

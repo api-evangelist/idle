@@ -76,11 +76,11 @@ apis:
         url: https://idlefinance.typeform.com/to/CzRkDH
         email: ''
 common:
-  - type: Developer Documentation
+  - type: Documentation
     url: https://docs.idle.finance/developers/introduction
   - type: Authentication
     url: https://idlefinance.typeform.com/to/CzRkDH
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/Idle-Finance
   - type: Governance
     url: https://gov.idle.finance
@@ -98,9 +98,9 @@ common:
     url: https://medium.com/idle-finance
   - type: Website
     url: https://idle.finance
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://idle.finance/terms
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://idle.finance/privacy
 maintainers:
   - FN: API Evangelist
