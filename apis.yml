@@ -76,6 +76,10 @@ apis:
         url: https://idlefinance.typeform.com/to/CzRkDH
         email: ''
 common:
+  - type: DomainSecurity
+    url: security/idle-domain-security.yml
+  - type: Authentication
+    url: authentication/idle-authentication.yml
   - type: Documentation
     url: https://docs.idle.finance/developers/introduction
   - type: Authentication

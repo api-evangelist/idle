@@ -1,0 +1,14 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  description: 'Bearer token obtained via https://idlefinance.typeform.com/to/CzRkDH. Include
+    as "Authorization: Bearer <token>" on all requests.'
+  sources:
+  - openapi/openapi.yml
