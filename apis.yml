@@ -76,6 +76,8 @@ apis:
         url: https://idlefinance.typeform.com/to/CzRkDH
         email: ''
 common:
+  - type: AgenticAccess
+    url: agentic-access/idle-agentic-access.yml
   - type: DomainSecurity
     url: security/idle-domain-security.yml
   - type: Authentication
