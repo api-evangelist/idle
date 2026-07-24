@@ -1,0 +1,79 @@
+openapi: 3.1.0
+info:
+  title: Idle Finance Pools TVL API
+  description: The Idle Finance REST API provides programmatic access to Best Yield and Yield Tranches vault pools, total value locked (TVL) metrics, historical yield rates for underlying token addresses, and protocol-level data across supported networks (Ethereum, Polygon zkEVM, Optimism). Authentication is via Bearer token obtained by request.
+  version: 1.0.0
+  contact:
+    name: Idle Finance Developer Access
+    url: https://idlefinance.typeform.com/to/CzRkDH
+  termsOfService: https://idle.finance/terms
+  license:
+    name: Proprietary
+    url: https://idle.finance/terms
+servers:
+- url: https://api.idle.finance
+  description: Ethereum mainnet endpoint
+- url: https://api-zkevm.idle.finance
+  description: Polygon zkEVM endpoint
+- url: https://api-optimism.idle.finance
+  description: Optimism endpoint
+security:
+- BearerAuth: []
+tags:
+- name: TVL
+  description: Total value locked metrics per underlying token
+paths:
+  /tvls:
+    get:
+      operationId: getTVLs
+      summary: Get TVL per underlying token
+      description: Returns total value locked (TVL) per underlying token for all vaults on the target network.
+      tags:
+      - TVL
+      security:
+      - BearerAuth: []
+      responses:
+        '200':
+          description: Map of token address to TVL string value
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  type: string
+                  description: TVL value as a decimal string
+              example:
+                '0x6B175474E89094C44Da98b954EedeAC495271d0F': '15234567.89'
+                '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48': '8901234.56'
+        '401':
+          description: Unauthorized — missing or invalid Bearer token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        '502':
+          description: Bad Gateway
+components:
+  schemas:
+    Error:
+      type: object
+      description: Standard error response.
+      properties:
+        error:
+          type: string
+          description: Short error code or message.
+          example: Unauthorized
+        message:
+          type: string
+          description: Detailed error description.
+          example: A valid Bearer token is required.
+      required:
+      - error
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: 'Bearer token obtained via https://idlefinance.typeform.com/to/CzRkDH. Include as "Authorization: Bearer <token>" on all requests.'
+externalDocs:
+  description: Idle Finance Developer Documentation
+  url: https://docs.idle.finance/developers/api
