@@ -1,0 +1,23 @@
+{
+  "provider": "idle",
+  "sources": [
+    "idle-pools-api-openapi.yml",
+    "idle-rates-api-openapi.yml",
+    "idle-tvl-api-openapi.yml",
+    "openapi.yml"
+  ],
+  "outputs": [
+    "idle-pools-api-openapi.yml",
+    "idle-rates-api-openapi.yml",
+    "idle-tvl-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "discovered stray spec: openapi.yml"
+  ],
+  "skipped": []
+}
