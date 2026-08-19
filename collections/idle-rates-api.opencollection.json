@@ -1,0 +1,83 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Idle Finance Pools Rates API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Rates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get historical rates for an underlying token",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.idle.finance/rates/:address",
+            "params": [
+              {
+                "name": "address",
+                "value": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+                "type": "path",
+                "description": "Underlying token contract address (e.g. DAI, USDC, USDT, WETH on Ethereum)."
+              },
+              {
+                "name": "start",
+                "value": "1672531200",
+                "type": "query",
+                "description": "Unix timestamp to filter results from (inclusive)."
+              },
+              {
+                "name": "end",
+                "value": "1704067200",
+                "type": "query",
+                "description": "Unix timestamp to filter results to (inclusive)."
+              },
+              {
+                "name": "isRisk",
+                "value": "false",
+                "type": "query",
+                "description": "Filter by strategy risk type. true returns risk-adjusted strategy data, false returns the default Best Yield strategy data."
+              },
+              {
+                "name": "frequency",
+                "value": "86400",
+                "type": "query",
+                "description": "Number of seconds between data records. Defaults to 86400 (one day)."
+              },
+              {
+                "name": "order",
+                "value": "asc",
+                "type": "query",
+                "description": "Sort order for results."
+              },
+              {
+                "name": "limit",
+                "value": "30",
+                "type": "query",
+                "description": "Maximum number of records to return."
+              }
+            ],
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Provides historical daily APY/rate data for Best Yield vaults filtered by the underlying token address and an optional calendar range."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

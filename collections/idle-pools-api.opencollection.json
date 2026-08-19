@@ -1,0 +1,39 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Idle Finance Pools API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Pools",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get all pools",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.idle.finance/pools",
+            "auth": {
+              "type": "bearer",
+              "token": "{{bearerToken}}"
+            }
+          },
+          "docs": "Retrieves all network pools for Best Yield and Yield Tranches vaults on the target network."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,209 @@
+{
+  "item": [
+    {
+      "id": "65989982-520b-469a-98cd-50a1dd9e6cd2",
+      "name": "TVL",
+      "description": {
+        "content": "Total value locked metrics per underlying token",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3772c695-bda1-4259-8bc7-bb7c45ecf260",
+          "name": "Get TVL per underlying token",
+          "request": {
+            "name": "Get TVL per underlying token",
+            "description": {
+              "content": "Returns total value locked (TVL) per underlying token for all vaults on the target network.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tvls"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "92baea7f-0d57-4d78-96e1-b2ae4405edf4",
+              "name": "Map of token address to TVL string value",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tvls"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"0x6B175474E89094C44Da98b954EedeAC495271d0F\": \"15234567.89\",\n  \"0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48\": \"8901234.56\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ae9acc02-ed9f-4b6b-83bd-4835de9d515c",
+              "name": "Unauthorized — missing or invalid Bearer token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tvls"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Unauthorized\",\n  \"message\": \"A valid Bearer token is required.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8de3ab46-f9c4-429b-9ca0-ed34a8083a65",
+              "name": "Bad Gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tvls"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.idle.finance",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "1f411f48-705b-438a-a81f-5e12cd0f7bd6",
+    "name": "Idle Finance Pools TVL API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Idle Finance REST API provides programmatic access to Best Yield and Yield Tranches vault pools, total value locked (TVL) metrics, historical yield rates for underlying token addresses, and protocol-level data across supported networks (Ethereum, Polygon zkEVM, Optimism). Authentication is via Bearer token obtained by request.\n\nContact Support:\n Name: Idle Finance Developer Access",
+      "type": "text/plain"
+    }
+  }
+}

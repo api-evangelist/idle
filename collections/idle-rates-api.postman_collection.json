@@ -1,0 +1,434 @@
+{
+  "item": [
+    {
+      "id": "40e788be-9721-4811-8ca3-8f1aca4fbf7a",
+      "name": "Rates",
+      "description": {
+        "content": "Historical daily yield rate data for Best Yield vaults",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "841099e7-4a97-44db-9fa8-7598114740c5",
+          "name": "Get historical rates for an underlying token",
+          "request": {
+            "name": "Get historical rates for an underlying token",
+            "description": {
+              "content": "Provides historical daily APY/rate data for Best Yield vaults filtered by the underlying token address and an optional calendar range.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "rates",
+                ":address"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "start",
+                  "value": "<long>",
+                  "description": "Unix timestamp to filter results from (inclusive)."
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "<long>",
+                  "description": "Unix timestamp to filter results to (inclusive)."
+                },
+                {
+                  "disabled": false,
+                  "key": "isRisk",
+                  "value": "<boolean>",
+                  "description": "Filter by strategy risk type. true returns risk-adjusted strategy data, false returns the default Best Yield strategy data."
+                },
+                {
+                  "disabled": false,
+                  "key": "frequency",
+                  "value": "86400",
+                  "description": "Number of seconds between data records. Defaults to 86400 (one day)."
+                },
+                {
+                  "disabled": false,
+                  "key": "order",
+                  "value": "asc",
+                  "description": "Sort order for results."
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>",
+                  "description": "Maximum number of records to return."
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "address",
+                  "description": "(Required) Underlying token contract address (e.g. DAI, USDC, USDT, WETH on Ethereum)."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "5411dfd6-7811-4d6f-8516-8398505e7c2e",
+              "name": "Array of historical rate records",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rates",
+                    ":address"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "1672531200"
+                    },
+                    {
+                      "key": "end",
+                      "value": "1704067200"
+                    },
+                    {
+                      "key": "isRisk",
+                      "value": "false"
+                    },
+                    {
+                      "key": "frequency",
+                      "value": "86400"
+                    },
+                    {
+                      "key": "order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "30"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) Underlying token contract address (e.g. DAI, USDC, USDT, WETH on Ethereum)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"timestamp\": 1704067200,\n    \"apy\": \"4.12\",\n    \"date\": \"2024-01-01\",\n    \"tvl\": \"5001234.00\"\n  },\n  {\n    \"timestamp\": 1704067200,\n    \"apy\": \"4.12\",\n    \"date\": \"2024-01-01\",\n    \"tvl\": \"5001234.00\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1d9746fc-9978-4a3e-b861-c20d7910da41",
+              "name": "Bad Request — invalid address or query parameters",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rates",
+                    ":address"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "1672531200"
+                    },
+                    {
+                      "key": "end",
+                      "value": "1704067200"
+                    },
+                    {
+                      "key": "isRisk",
+                      "value": "false"
+                    },
+                    {
+                      "key": "frequency",
+                      "value": "86400"
+                    },
+                    {
+                      "key": "order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "30"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) Underlying token contract address (e.g. DAI, USDC, USDT, WETH on Ethereum)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Unauthorized\",\n  \"message\": \"A valid Bearer token is required.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "023c2c97-55e8-4596-a604-3ff088ca5757",
+              "name": "Unauthorized — missing or invalid Bearer token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rates",
+                    ":address"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "1672531200"
+                    },
+                    {
+                      "key": "end",
+                      "value": "1704067200"
+                    },
+                    {
+                      "key": "isRisk",
+                      "value": "false"
+                    },
+                    {
+                      "key": "frequency",
+                      "value": "86400"
+                    },
+                    {
+                      "key": "order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "30"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) Underlying token contract address (e.g. DAI, USDC, USDT, WETH on Ethereum)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Unauthorized\",\n  \"message\": \"A valid Bearer token is required.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f2ba3607-62f7-4da7-90ba-81b91cf2f0bd",
+              "name": "Bad Gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rates",
+                    ":address"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "1672531200"
+                    },
+                    {
+                      "key": "end",
+                      "value": "1704067200"
+                    },
+                    {
+                      "key": "isRisk",
+                      "value": "false"
+                    },
+                    {
+                      "key": "frequency",
+                      "value": "86400"
+                    },
+                    {
+                      "key": "order",
+                      "value": "asc"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "30"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "address",
+                      "description": "(Required) Underlying token contract address (e.g. DAI, USDC, USDT, WETH on Ethereum)."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.idle.finance",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "592f0975-b90d-4433-9570-2664bdd6877d",
+    "name": "Idle Finance Pools Rates API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Idle Finance REST API provides programmatic access to Best Yield and Yield Tranches vault pools, total value locked (TVL) metrics, historical yield rates for underlying token addresses, and protocol-level data across supported networks (Ethereum, Polygon zkEVM, Optimism). Authentication is via Bearer token obtained by request.\n\nContact Support:\n Name: Idle Finance Developer Access",
+      "type": "text/plain"
+    }
+  }
+}

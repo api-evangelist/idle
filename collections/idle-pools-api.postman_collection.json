@@ -1,0 +1,209 @@
+{
+  "item": [
+    {
+      "id": "6ed68e39-cd8a-4bf8-9e85-53948464ec27",
+      "name": "Pools",
+      "description": {
+        "content": "Best Yield and Yield Tranches vault pool data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6beaf164-8940-4add-a672-35e8f73ac4a3",
+          "name": "Get all pools",
+          "request": {
+            "name": "Get all pools",
+            "description": {
+              "content": "Retrieves all network pools for Best Yield and Yield Tranches vaults on the target network.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "pools"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{bearerToken}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "011e74ca-4975-4bce-88e0-fcb706cd2da2",
+              "name": "Array of pool objects",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pools"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"address\": \"0xc8c64CC8c15D9aa1F4dD40933f3eF742A7c62478\",\n    \"name\": \"idleDAIYield\",\n    \"token\": \"DAI\",\n    \"tokenAddress\": \"0x6B175474E89094C44Da98b954EedeAC495271d0F\",\n    \"type\": \"best-yield\",\n    \"apy\": \"4.52\",\n    \"tvl\": \"5234567.89\",\n    \"underlying\": [\n      {\n        \"protocol\": \"Aave\",\n        \"allocation\": \"62.5\",\n        \"apy\": \"3.91\"\n      },\n      {\n        \"protocol\": \"Aave\",\n        \"allocation\": \"62.5\",\n        \"apy\": \"3.91\"\n      }\n    ]\n  },\n  {\n    \"address\": \"0xc8c64CC8c15D9aa1F4dD40933f3eF742A7c62478\",\n    \"name\": \"idleDAIYield\",\n    \"token\": \"DAI\",\n    \"tokenAddress\": \"0x6B175474E89094C44Da98b954EedeAC495271d0F\",\n    \"type\": \"best-yield\",\n    \"apy\": \"4.52\",\n    \"tvl\": \"5234567.89\",\n    \"underlying\": [\n      {\n        \"protocol\": \"Aave\",\n        \"allocation\": \"62.5\",\n        \"apy\": \"3.91\"\n      },\n      {\n        \"protocol\": \"Aave\",\n        \"allocation\": \"62.5\",\n        \"apy\": \"3.91\"\n      }\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6fca21a9-4365-496c-b45e-9cc12ceb364b",
+              "name": "Unauthorized — missing or invalid Bearer token",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pools"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"error\": \"Unauthorized\",\n  \"message\": \"A valid Bearer token is required.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dbb10a0e-f4c2-442c-8996-7db58b3ad1bb",
+              "name": "Bad Gateway",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "pools"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Gateway",
+              "code": 502,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.idle.finance",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "31afcfdd-c9e6-4523-835e-a51c6ccfaa8e",
+    "name": "Idle Finance Pools API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Idle Finance REST API provides programmatic access to Best Yield and Yield Tranches vault pools, total value locked (TVL) metrics, historical yield rates for underlying token addresses, and protocol-level data across supported networks (Ethereum, Polygon zkEVM, Optimism). Authentication is via Bearer token obtained by request.\n\nContact Support:\n Name: Idle Finance Developer Access",
+      "type": "text/plain"
+    }
+  }
+}
