@@ -3,21 +3,21 @@
   "sources": [
     "idle-pools-api-openapi.yml",
     "idle-rates-api-openapi.yml",
-    "idle-tvl-api-openapi.yml",
-    "openapi.yml"
+    "idle-tvl-api-openapi.yml"
   ],
   "outputs": [
     "idle-pools-api-openapi.yml",
     "idle-rates-api-openapi.yml",
     "idle-tvl-api-openapi.yml"
   ],
-  "archived": [
-    "archived openapi.yml"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
-    "discovered stray spec: openapi.yml"
+    "idle-pools-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "idle-rates-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "idle-tvl-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
   ],
   "skipped": []
 }
