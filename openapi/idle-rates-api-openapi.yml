@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Idle Finance Pools Rates API
+  title: Idle Finance Rates API
   description: The Idle Finance REST API provides programmatic access to Best Yield and Yield Tranches vault pools, total value locked (TVL) metrics, historical yield rates for underlying token addresses, and protocol-level data across supported networks (Ethereum, Polygon zkEVM, Optimism). Authentication is via Bearer token obtained by request.
   version: 1.0.0
   contact:
@@ -116,20 +116,6 @@ paths:
           description: Bad Gateway
 components:
   schemas:
-    Error:
-      type: object
-      description: Standard error response.
-      properties:
-        error:
-          type: string
-          description: Short error code or message.
-          example: Unauthorized
-        message:
-          type: string
-          description: Detailed error description.
-          example: A valid Bearer token is required.
-      required:
-      - error
     RateRecord:
       type: object
       description: Historical daily APY/rate record for a Best Yield vault.
@@ -155,6 +141,20 @@ components:
       required:
       - timestamp
       - apy
+    Error:
+      type: object
+      description: Standard error response.
+      properties:
+        error:
+          type: string
+          description: Short error code or message.
+          example: Unauthorized
+        message:
+          type: string
+          description: Detailed error description.
+          example: A valid Bearer token is required.
+      required:
+      - error
   securitySchemes:
     BearerAuth:
       type: http

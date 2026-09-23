@@ -1,6 +1,6 @@
 openapi: 3.2.0
 info:
-  title: Idle Finance Pools TVL API
+  title: Idle Finance TVL API
   description: The Idle Finance REST API provides programmatic access to Best Yield and Yield Tranches vault pools, total value locked (TVL) metrics, historical yield rates for underlying token addresses, and protocol-level data across supported networks (Ethereum, Polygon zkEVM, Optimism). Authentication is via Bearer token obtained by request.
   version: 1.0.0
   contact:

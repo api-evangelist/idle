@@ -1,9 +1,7 @@
 {
   "provider": "idle",
   "sources": [
-    "idle-pools-api-openapi.yml",
-    "idle-rates-api-openapi.yml",
-    "idle-tvl-api-openapi.yml"
+    "_original/openapi.yml"
   ],
   "outputs": [
     "idle-pools-api-openapi.yml",
@@ -14,10 +12,13 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "idle-pools-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "idle-rates-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "idle-tvl-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "idle-pools-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "idle-rates-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "idle-tvl-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

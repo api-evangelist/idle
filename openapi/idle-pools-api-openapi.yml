@@ -51,36 +51,6 @@ paths:
           description: Bad Gateway
 components:
   schemas:
-    Error:
-      type: object
-      description: Standard error response.
-      properties:
-        error:
-          type: string
-          description: Short error code or message.
-          example: Unauthorized
-        message:
-          type: string
-          description: Detailed error description.
-          example: A valid Bearer token is required.
-      required:
-      - error
-    UnderlyingAllocation:
-      type: object
-      description: Allocation of pool assets to an underlying yield protocol.
-      properties:
-        protocol:
-          type: string
-          description: Name of the underlying protocol.
-          example: Aave
-        allocation:
-          type: string
-          description: Percentage allocation as a decimal string.
-          example: '62.5'
-        apy:
-          type: string
-          description: APY from this protocol as a decimal string.
-          example: '3.91'
     Pool:
       type: object
       description: Represents a single Best Yield or Yield Tranches vault pool on the target network.
@@ -130,6 +100,36 @@ components:
       - token
       - tokenAddress
       - type
+    UnderlyingAllocation:
+      type: object
+      description: Allocation of pool assets to an underlying yield protocol.
+      properties:
+        protocol:
+          type: string
+          description: Name of the underlying protocol.
+          example: Aave
+        allocation:
+          type: string
+          description: Percentage allocation as a decimal string.
+          example: '62.5'
+        apy:
+          type: string
+          description: APY from this protocol as a decimal string.
+          example: '3.91'
+    Error:
+      type: object
+      description: Standard error response.
+      properties:
+        error:
+          type: string
+          description: Short error code or message.
+          example: Unauthorized
+        message:
+          type: string
+          description: Detailed error description.
+          example: A valid Bearer token is required.
+      required:
+      - error
   securitySchemes:
     BearerAuth:
       type: http
