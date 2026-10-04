@@ -116,20 +116,6 @@ paths:
           description: Bad Gateway
 components:
   schemas:
-    Error:
-      type: object
-      description: Standard error response.
-      properties:
-        error:
-          type: string
-          description: Short error code or message.
-          example: Unauthorized
-        message:
-          type: string
-          description: Detailed error description.
-          example: A valid Bearer token is required.
-      required:
-      - error
     RateRecord:
       type: object
       description: Historical daily APY/rate record for a Best Yield vault.
@@ -155,6 +141,20 @@ components:
       required:
       - timestamp
       - apy
+    Error:
+      type: object
+      description: Standard error response.
+      properties:
+        error:
+          type: string
+          description: Short error code or message.
+          example: Unauthorized
+        message:
+          type: string
+          description: Detailed error description.
+          example: A valid Bearer token is required.
+      required:
+      - error
   securitySchemes:
     BearerAuth:
       type: http
