@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: Idle Finance API Plans
 description: Idle Finance API access is gated by Bearer token authentication. Access is granted by request through a Typeform intake form. The API itself does not publicly advertise tiered subscription pricing; however, the Idle protocol offers an Integrators Program with fee-sharing tiers based on deposited TVL for builders integrating Idle vaults into their products.
 plans:
@@ -35,3 +39,27 @@ notes:
   - API pricing and access tiers are not publicly listed; contact via the Typeform request form at https://idlefinance.typeform.com/to/CzRkDH
   - The Integrators Program fee-sharing structure has 9 tiers between 10% and 50% based on deposited volume
   - stkIDLE holders (governance stakers) may receive fee discounts distributed monthly via a dedicated dashboard
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: API Access (Request-Based)
+    access: freemium
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Integrators Program - Base Tier
+    access: partner
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Integrators Program - Top Tier
+    access: partner
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []

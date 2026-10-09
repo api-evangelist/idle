@@ -1,3 +1,7 @@
+# Provenance stamped 2026-10-07 (roadmap#943): written by an API Evangelist sweep (undated — the file carries no date and git cannot supply one), not
+# harvested from the provider. `method: generated` so the economics campaign may replace it with a
+# dated, verbatim transcription; every figure below is unverified until it does.
+method: generated
 name: Idle Finance API Rate Limits
 description: Idle Finance does not publicly document specific rate limit thresholds for their REST API. Access is granted via Bearer token by request. The underlying protocol rebalances yield allocations on a cadence that reflects practical data freshness boundaries for API consumers.
 rate_limits: []
