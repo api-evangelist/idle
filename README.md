@@ -64,43 +64,153 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Idle Finance is a decentralized yield automation protocol that has operated since 2019. The platform enables users and integrators to optimize yield generation across DeFi by aggregating yield sources from protocols such as Compound, Aave, Morpho, and Clearpool. Idle supports multiple chains including Ethereum, Polygon, Polygon zkEVM, and Optimism.
+Idle Finance is a decentralized yield automation protocol that has operated since 2019, enabling users and integrators to optimize yield generation across DeFi. The platform offers REST APIs for querying Best Yield and Yield Tranches pools, APY and TVL metrics, historical rates, and governance staking information. Idle aggregates yield sources across protocols such as Compound, Aave, Morpho, and Clearpool, and supports multiple chains including Ethereum, Polygon, Polygon zkEVM, and Optimism.
 
-The Idle Finance REST API provides programmatic access to Best Yield and Yield Tranches vault pools, total value locked (TVL) metrics per underlying token, and historical yield rates for supported token addresses. Authentication is via Bearer token, obtained by request through the developer intake form.
+**Areas:** DeFi · Yield Optimization · Finance · Cryptocurrency · Staking · Governance · TVL · APY
 
-**Human URL:** [https://idle.finance](https://idle.finance)  
-**Developer Docs:** [https://docs.idle.finance/developers/api](https://docs.idle.finance/developers/api)  
-**Base URL (Ethereum):** `https://api.idle.finance`  
-**Base URL (Polygon zkEVM):** `https://api-zkevm.idle.finance`  
-**Base URL (Optimism):** `https://api-optimism.idle.finance`
+## Idle Finance on APIs.io
 
-## APIs
+Everything profiled for Idle Finance is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/idle/](https://apis.io/providers/idle/)** — or go straight to one of the APIs or properties below.
 
-- **Pools** (`GET /pools`) - Returns all network pools for Best Yield and Yield Tranches vaults
-- **TVLs** (`GET /tvls`) - Returns total value locked per underlying token
-- **Rates** (`GET /rates/{address}`) - Returns historical daily yield data for Best Yield vaults in a given date range
+### APIs (5)
 
-## Authentication
+- [Idle Finance Polygon zkEVM API](https://apis.io/apis/idle/idle-finance-polygon-zkevm-api/) — Idle Finance REST API endpoint for Polygon zkEVM network, providing pool and TVL data for Yield Tranches vaults deployed on Polygon zkEVM.
+- [Idle Finance Optimism API](https://apis.io/apis/idle/idle-finance-optimism-api/) — Idle Finance REST API endpoint for the Optimism network, providing pool and TVL data for Yield Tranches vaults deployed on Optimism.
+- [Idle Finance Pools API](https://apis.io/apis/idle/idle-pools-api/) — Best Yield and Yield Tranches vault pool data
+- [Idle Finance Rates API](https://apis.io/apis/idle/idle-rates-api/) — Historical daily yield rate data for Best Yield vaults
+- [Idle Finance TVL API](https://apis.io/apis/idle/idle-tvl-api/) — Total value locked metrics per underlying token
 
-Bearer token required for all API endpoints. Request access via:  
-[https://idlefinance.typeform.com/to/CzRkDH](https://idlefinance.typeform.com/to/CzRkDH)
+### Published properties
 
-## Contents
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-| File | Description |
-|------|-------------|
-| `apis.yml` | APIs.json 0.19 provider profile |
-| `plans/plans.yml` | API access plans and Integrators Program details |
-| `rate-limits/rate-limits.yml` | Rate limit documentation |
-| `finops/finops.yml` | Financial operations and cost guidance |
+#### Agentic access (1)
 
-## Links
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Idle Agentic Access](https://apis.io/agentic-access/idle/idle-agentic-access/)
+
+#### JSON Schema (3)
+
+The data models the API reads and writes.
+
+- [Pool](https://apis.io/schemas/idle/pool/)
+- [RateRecord](https://apis.io/schemas/idle/rate-record/)
+- [UnderlyingAllocation](https://apis.io/schemas/idle/underlying-allocation/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Idle Finance Context](https://apis.io/jsonld/idle/idle-finance/)
+
+#### Examples (3)
+
+Example requests and responses.
+
+- [Get Pools](https://apis.io/examples/idle/get-pools/)
+- [Get Rates By Address](https://apis.io/examples/idle/get-rates-by-address/)
+- [Get Tvls](https://apis.io/examples/idle/get-tvls/)
+
+#### Collections (3)
+
+Postman and Open Collection request collections.
+
+- [Idle Finance Pools API](https://apis.io/collections/idle/open-idle-pools-api/)
+- [Idle Finance Pools Rates API](https://apis.io/collections/idle/open-idle-rates-api/)
+- [Idle Finance Pools TVL API](https://apis.io/collections/idle/open-idle-tvl-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Idle Finance — jsonschema rules](https://apis.io/rules/idle/idle-jsonschema-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Idle Authentication](https://apis.io/security/idle/idle-authentication/)
+- [Idle Domain Security](https://apis.io/security/idle/idle-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Plans](https://apis.io/plans/idle/plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Rate Limits](https://apis.io/rate-limits/idle/rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/idle/finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://idle.finance)
-- [Documentation](https://docs.idle.finance)
-- [GitHub](https://github.com/Idle-Finance)
-- [Governance](https://gov.idle.finance)
-- [Bug Bounty](https://immunefi.com/bounty/idlefinance/)
-- [Discord](https://discord.gg/mpySAJp)
-- [Twitter](https://twitter.com/idlefinance)
+- [Documentation](https://docs.idle.finance/developers/introduction)
 - [Blog](https://medium.com/idle-finance)
+- [Terms of service](https://idle.finance/terms)
+- [Privacy policy](https://idle.finance/privacy)
+- [GitHub](https://github.com/Idle-Finance)
+
+## API Evangelist rating
+
+**Kin Score 27.4** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 56.5 |
+| Contract governance | 9.8 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 7.9 |
+
+**Agent readiness 35.4** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | verified |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/idle/](https://apis.io/providers/idle/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Idle Finance: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/idle/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
